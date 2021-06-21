@@ -7,7 +7,7 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'https://thingproxy.freeboard.io/fetch/https://dmnktoe.de/champions.json'
+  apiUrl = 'https://api.jsonbin.io/b/60d0bc468a4cd025b7a271b9'
 
   constructor(private httpClient: HttpClient) {}
 
