@@ -7,12 +7,13 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
+  apiUrl = 'https://thingproxy.freeboard.io/fetch/https://dmnktoe.de/champions.json'
 
   constructor(private httpClient: HttpClient) {}
 
   getChampions() {
     return this.httpClient
-      .get('./data/champions.json')
+      .get(this.apiUrl)
       .pipe(
         map((body: any) => body),
         catchError((err) =>
