@@ -1,0 +1,39 @@
+.gameCard {
+  background: url('./../../../assets/images/gameCard_background.jpg');
+  border-radius: 1.5rem;
+  color: #ffffff;
+
+  .gameCardHeader {
+
+    .gameCardHeaderImage img {
+      width: 6rem;
+    }
+
+    .gameCardHeaderTitle {
+      font-family: 'Chelsea Market', cursive;
+    }
+
+  }
+
+  .gameCardBody {
+
+    .gameCardBodyTags {
+
+      .gameCardBodyTagsSingle {
+        font-family: "Chelsea Market", cursive;
+        background: #fff;
+        color: #2b2626;
+        border-radius: 10px;
+        display: inline-flex;
+        margin-right: 5px;
+      }
+
+      .gameCardBodyTagsSingle:last-child {
+        margin-right: 0;
+      }
+    }
+
+  }
+}
+
+
