@@ -8,6 +8,7 @@ import { HeaderComponent } from './templates/header/header.component';
 import { SearchComponent } from './templates/search/search.component';
 import { ChampionsGalleryComponent } from './templates/champions-gallery/champions-gallery.component';
 import { ChampionsCardComponent } from './templates/champions-card/champions-card.component';
+import { LoaderComponent } from './templates/_shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChampionsCardComponent } from './templates/champions-card/champions-car
     HeaderComponent,
     SearchComponent,
     ChampionsGalleryComponent,
-    ChampionsCardComponent
+    ChampionsCardComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
