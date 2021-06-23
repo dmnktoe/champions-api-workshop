@@ -6,6 +6,8 @@
   transform-style: preserve-3d;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   min-height: 500px;
+  box-shadow: 0px 2px 15px rgb(0 0 0 / 50%);
+  cursor: pointer;
 
   .gameCardFront, .gameCardBack {
     width: 100%;
@@ -66,6 +68,10 @@
       }
     }
   }
+}
+
+.gameCard:hover {
+  box-shadow: 0px 2px 30px rgb(0 0 0 / 70%);
 }
 
 .gameCard.flipped {
