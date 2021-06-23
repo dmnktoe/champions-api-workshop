@@ -12,6 +12,7 @@ export class ChampionsGalleryComponent implements OnInit {
   // @ts-ignore
   champions: Champion[];
   isLoading = false;
+  term: any;
 
   constructor(private apiService: ApiService) { }
 
