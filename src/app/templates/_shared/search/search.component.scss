@@ -1,0 +1,21 @@
+.form-control {
+  background-color: rgb(255 255 255 / 50%);
+  border: 1px solid #ffffff;
+  border-radius: 5rem;
+  backdrop-filter: blur(10px);
+  font-family: 'Chelsea Market', cursive;
+  padding: 1rem 0.75rem;
+}
+
+span#basic-addon1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #6c757d;
+  border: 1px solid #ffffff;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-right: 0;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
