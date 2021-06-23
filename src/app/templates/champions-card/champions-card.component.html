@@ -1,56 +1,73 @@
 <div class="gameCard mb-4">
-  <div class="gameCardInner p-4">
-    <div class="gameCardHeader mb-3 d-flex align-items-start">
-      <div class="gameCardHeaderImage me-3">
-        <img src="{{ champion.icon }}" alt="{{ champion.name }}">
+  <div class="gameCardFront">
+    <div class="gameCardInner p-4">
+      <div class="gameCardHeader mb-3 d-flex align-items-start">
+        <div class="gameCardHeaderImage me-3">
+          <img src="{{ champion.icon }}" alt="{{ champion.name }}">
+        </div>
+        <div class="gameCardHeaderTitle">
+          <h3>{{ champion.name }}</h3>
+          <h6>{{ champion.title }}</h6>
+        </div>
       </div>
-      <div class="gameCardHeaderTitle">
-        <h3>{{ champion.name }}</h3>
-        <h6>{{ champion.title }}</h6>
+      <div class="gameCardBody">
+        <div class="gameCardBodyStats">
+          <table class="table table-bordered">
+            <tbody>
+            <tr>
+              <th scope="row">HP</th>
+              <td>{{ champion.stats.hp }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Movement-Speed</th>
+              <td>{{ champion.stats.movespeed }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Armor</th>
+              <td>{{ champion.stats.armor }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Attack-Range</th>
+              <td>{{ champion.stats.attackrange }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Attack-Range</th>
+              <td>{{ champion.stats.attackrange }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Attack-Damage</th>
+              <td>{{ champion.stats.attackdamage }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Attack-Speed</th>
+              <td>{{ champion.stats.attackspeed }}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="gameCardBodyTags">
+          <span class="gameCardBodyTagsSingle px-2" *ngFor="let tag of champion.tags">
+            {{ tag }}
+          </span>
+        </div>
       </div>
     </div>
-    <div class="gameCardBody">
-      <div class="gameCardBodyDescription">
-        <!-- {{ champion.description }} -->
+  </div>
+  <div class="gameCardBack">
+    <div class="gameCardInner p-4">
+      <div class="gameCardHeader mb-3 d-flex align-items-start">
+        <div class="gameCardHeaderImage me-3">
+          <img src="{{ champion.icon }}" alt="{{ champion.name }}">
+        </div>
+        <div class="gameCardHeaderTitle">
+          <h3>{{ champion.name }}</h3>
+          <h6>{{ champion.title }}</h6>
+        </div>
       </div>
-      <div class="gameCardBodyStats">
-        <table class="table table-bordered">
-          <tbody>
-          <tr>
-            <th scope="row">HP</th>
-            <td>{{ champion.stats.hp }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Movement-Speed</th>
-            <td>{{ champion.stats.movespeed }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Armor</th>
-            <td>{{ champion.stats.armor }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Attack-Range</th>
-            <td>{{ champion.stats.attackrange }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Attack-Range</th>
-            <td>{{ champion.stats.attackrange }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Attack-Damage</th>
-            <td>{{ champion.stats.attackdamage }}</td>
-          </tr>
-          <tr>
-            <th scope="row">Attack-Speed</th>
-            <td>{{ champion.stats.attackspeed }}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="gameCardBodyTags">
-        <span class="gameCardBodyTagsSingle px-2" *ngFor="let tag of champion.tags">
-          {{ tag }}
-        </span>
+      <div class="gameCardBody">
+        <div class="gameCardBodyDescription">
+          {{ champion.description }}
+        </div>
       </div>
     </div>
   </div>
