@@ -1,4 +1,4 @@
-<div class="gameCard mb-4">
+<div class="gameCard mb-4" [class.flipped]="isFlipped == true" (click)="flipCard()">
   <div class="gameCardFront">
     <div class="gameCardInner p-4">
       <div class="gameCardHeader mb-3 d-flex align-items-start">
