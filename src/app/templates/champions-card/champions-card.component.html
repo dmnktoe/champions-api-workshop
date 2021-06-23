@@ -14,12 +14,38 @@
         <!-- {{ champion.description }} -->
       </div>
       <div class="gameCardBodyStats">
-        HP: {{ champion.stats.hp }}<br>
-        Movement-Speed: {{ champion.stats.movespeed }}<br>
-        Armor: {{ champion.stats.armor }}<br>
-        Attack-Range: {{ champion.stats.attackrange }}<br>
-        Attack-Damage: {{ champion.stats.attackdamage }}<br>
-        Attack-Speed: {{ champion.stats.attackspeed }}
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th scope="row">HP</th>
+            <td>{{ champion.stats.hp }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Movement-Speed</th>
+            <td>{{ champion.stats.movespeed }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Armor</th>
+            <td>{{ champion.stats.armor }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack-Range</th>
+            <td>{{ champion.stats.attackrange }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack-Range</th>
+            <td>{{ champion.stats.attackrange }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack-Damage</th>
+            <td>{{ champion.stats.attackdamage }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Attack-Speed</th>
+            <td>{{ champion.stats.attackspeed }}</td>
+          </tr>
+          </tbody>
+        </table>
       </div>
       <div class="gameCardBodyTags">
         <span class="gameCardBodyTagsSingle px-2" *ngFor="let tag of champion.tags">
