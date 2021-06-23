@@ -9,10 +9,15 @@ import { Champion } from "../../core/model/Champion";
 export class ChampionsCardComponent implements OnInit {
   // @ts-ignore
   @Input() champion: Champion;
+  public isFlipped = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public flipCard() {
+    this.isFlipped = !this.isFlipped;
   }
 
 }
