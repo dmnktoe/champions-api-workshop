@@ -4,8 +4,6 @@ import { ApiService } from "../../core/services/api.service";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Title } from "@angular/platform-browser";
 import { finalize } from "rxjs/operators";
-// @ts-ignore
-import flat from 'flat';
 
 @Component({
   selector: 'app-champions-detail',
@@ -45,10 +43,12 @@ export class ChampionsDetailComponent implements OnInit {
             })
           )
           .subscribe((champion) => {
-            console.log(champion.data)
-            const test = flat(champion.data);
-            console.log(test);
-            this.champion = champion.data;
+            function flatten(obj: ArrayLike<unknown> | { [s: string]: unknown; }){
+              return Object.values(obj).flat()
+            }
+            const flatChampion = flatten(champion.data);
+            // @ts-ignore
+            this.champion = flatChampion['0'];
             this.setTitle({ title: this.champion.name });
           });
       }
