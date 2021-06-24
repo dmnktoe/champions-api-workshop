@@ -44,6 +44,7 @@ export class ChampionsDetailComponent implements OnInit {
           )
           .subscribe((champion) => {
             function flatten(obj: ArrayLike<unknown> | { [s: string]: unknown; }){
+              // @ts-ignore
               return Object.values(obj).flat()
             }
             const flatChampion = flatten(champion.data);
