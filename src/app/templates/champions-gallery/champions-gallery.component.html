@@ -19,8 +19,21 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col mt-2 mx-xl-3 mt-xl-0 text-end">
+      <div class="searchResultsCount shadow-text" *ngIf="(champions | filter:term)?.length === 0">
+        No results found.
+      </div>
+      <div class="searchResultsCount shadow-text" *ngIf="(champions | filter:term)?.length !== 0 && (champions | filter:term)?.length !== 1">
+        {{ (champions | filter:term)?.length }} results found.
+      </div>
+      <div class="searchResultsCount shadow-text" *ngIf="(champions | filter:term)?.length === 1">
+        {{ (champions | filter:term)?.length }} result found.
+      </div>
+    </div>
+  </div>
   <div class="row py-4">
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let champion of champions  | filter:term">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let champion of champions | filter:term">
       <app-champions-card [champion]="champion"></app-champions-card>
     </div>
   </div>
