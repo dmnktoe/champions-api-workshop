@@ -6,7 +6,11 @@
           <img src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/champion/{{ champion.image.full }}" alt="{{ champion.name }}">
         </div>
         <div class="gameCardHeaderTitle">
-          <h3>{{ champion.name }}</h3>
+          <a routerLink="/{{ champion.name}}">
+            <h3>
+              {{ champion.name }}
+            </h3>
+          </a>
           <h6>{{ champion.title }}</h6>
         </div>
       </div>
