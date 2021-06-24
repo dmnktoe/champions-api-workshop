@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../core/services/api.service';
-import { Champion } from '../../core/model/Champion';
+import { ApiService } from '../../../core/services/api.service';
+import { Champion } from '../../../core/model/Champion';
 import { finalize } from 'rxjs/operators';
 
 @Component({
@@ -28,7 +28,6 @@ export class ChampionsGalleryComponent implements OnInit {
           let champion = champions.data[index];
           return champion;
         })
-        console.log(resultArray);
         this.champions = resultArray;
       })
   }

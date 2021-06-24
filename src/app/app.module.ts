@@ -14,8 +14,8 @@ import { LoaderComponent } from './templates/_shared/loader/loader.component';
 
 /* Champions */
 import { ChampionsComponent } from './templates/champions/champions.component';
-import { ChampionsGalleryComponent } from './templates/champions-gallery/champions-gallery.component';
-import { ChampionsCardComponent } from './templates/champions-card/champions-card.component';
+import { ChampionsGalleryComponent } from './templates/champions/champions-gallery/champions-gallery.component';
+import { ChampionsCardComponent } from './templates/champions/champions-card/champions-card.component';
 
 /* Plugins */
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
