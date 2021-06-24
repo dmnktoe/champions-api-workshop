@@ -22,13 +22,13 @@ export class ApiService {
       );
   }
 
-  getChampionsDetail(championName: string) {
+  getChampionsDetail(championName: { championId: string }) {
     return this.httpClient
-      .get(this.apiUrl + 'champion' + championName + '.json')
+      .get(this.apiUrl + 'champion/' + championName + '.json')
       .pipe(
         map((body: any) => body),
         catchError((err) =>
-          of('Champions konnten nicht geladen werden.')
+          of('Champion konnte nicht geladen werden.')
         )
       );
   }
