@@ -24,7 +24,6 @@ export class ChampionsGalleryComponent implements OnInit {
         this.isLoading = false;
       }))
       .subscribe((champions) => {
-        console.log(champions);
         this.champions = champions;
       })
   }
