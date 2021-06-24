@@ -16,6 +16,7 @@ import { LoaderComponent } from './templates/_shared/loader/loader.component';
 import { ChampionsComponent } from './templates/champions/champions.component';
 import { ChampionsGalleryComponent } from './templates/champions/champions-gallery/champions-gallery.component';
 import { ChampionsCardComponent } from './templates/champions/champions-card/champions-card.component';
+import { ChampionsDetailComponent } from './templates/champions-detail/champions-detail.component';
 
 /* Plugins */
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -29,7 +30,8 @@ import { Ng2SearchPipeModule } from "ng2-search-filter";
     ChampionsCardComponent,
     LoaderComponent,
     ScrollToTopComponent,
-    ChampionsComponent
+    ChampionsComponent,
+    ChampionsDetailComponent
   ],
   imports: [
     BrowserModule,
