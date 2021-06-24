@@ -55,4 +55,8 @@ export class ChampionsDetailComponent implements OnInit {
       }
     });
   }
+
+  getBackgroundImage(){
+    return "url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.champion.name + "_0.jpg)";
+  }
 }
