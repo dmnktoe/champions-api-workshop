@@ -24,7 +24,12 @@ export class ChampionsGalleryComponent implements OnInit {
         this.isLoading = false;
       }))
       .subscribe((champions) => {
-        this.champions = champions;
+        const resultArray = Object.keys(champions.data).map(index => {
+          let champion = champions.data[index];
+          return champion;
+        })
+        console.log(resultArray);
+        this.champions = resultArray;
       })
   }
 }
