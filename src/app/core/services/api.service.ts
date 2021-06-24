@@ -7,13 +7,24 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  apiUrl = 'https://api.jsonbin.io/b/60d0bc468a4cd025b7a271b9'
+  apiUrl = 'https://ddragon.leagueoflegends.com/cdn/11.13.1/data/en_US/'
 
   constructor(private httpClient: HttpClient) {}
 
   getChampions() {
     return this.httpClient
-      .get(this.apiUrl)
+      .get(this.apiUrl + 'champion.json')
+      .pipe(
+        map((body: any) => body),
+        catchError((err) =>
+          of('Champions konnten nicht geladen werden.')
+        )
+      );
+  }
+
+  getChampionsDetail(championName: string) {
+    return this.httpClient
+      .get(this.apiUrl + 'champion' + championName + '.json')
       .pipe(
         map((body: any) => body),
         catchError((err) =>
