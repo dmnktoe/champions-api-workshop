@@ -10,6 +10,7 @@ import { ChampionsCardComponent } from './templates/champions-card/champions-car
 import { LoaderComponent } from './templates/_shared/loader/loader.component';
 import { Ng2SearchPipeModule } from "ng2-search-filter";
 import {FormsModule} from "@angular/forms";
+import { ScrollToTopComponent } from './templates/_shared/scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {FormsModule} from "@angular/forms";
     HeaderComponent,
     ChampionsGalleryComponent,
     ChampionsCardComponent,
-    LoaderComponent
+    LoaderComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,

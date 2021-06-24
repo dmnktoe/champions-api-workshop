@@ -1,0 +1,38 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  z-index: 95;
+  border-radius: 50%;
+}
+
+.scroll-to-top:hover {
+  box-shadow: 0 3px 20px rgb(0 0 0 / 30%);
+}
+
+a.btn.scrollTop {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+}
+
+.show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+}
+
+img.scrollToTopArrow {
+  width: 2rem;
+  position: relative;
+  display: block;
+}
