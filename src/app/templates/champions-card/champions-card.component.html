@@ -3,7 +3,7 @@
     <div class="gameCardInner p-4">
       <div class="gameCardHeader mb-3 d-flex align-items-start">
         <div class="gameCardHeaderImage me-3">
-          <img src="{{ champion.icon }}" alt="{{ champion.name }}">
+          <img src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/champion/{{ champion.image.full }}" alt="{{ champion.name }}">
         </div>
         <div class="gameCardHeaderTitle">
           <h3>{{ champion.name }}</h3>
@@ -57,7 +57,7 @@
     <div class="gameCardInner p-4">
       <div class="gameCardHeader mb-3 d-flex align-items-start">
         <div class="gameCardHeaderImage me-3">
-          <img src="{{ champion.icon }}" alt="{{ champion.name }}">
+          <img src="https://ddragon.leagueoflegends.com/cdn/11.13.1/img/champion/{{ champion.image.full }}" alt="{{ champion.name }}">
         </div>
         <div class="gameCardHeaderTitle">
           <h3>{{ champion.name }}</h3>
@@ -66,7 +66,7 @@
       </div>
       <div class="gameCardBody">
         <div class="gameCardBodyDescription">
-          {{ champion.description }}
+          {{ champion.blurb }}
         </div>
       </div>
     </div>
