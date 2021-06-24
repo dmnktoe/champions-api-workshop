@@ -4,6 +4,15 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-icons/font/bootstrap-icons.css';
 
+@font-face {
+  font-family: 'Chelsea Market';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('./assets/fonts/chelsea-market-v8-latin-regular.woff2') format('woff2'),
+  url('./assets/fonts/chelsea-market-v8-latin-regular.woff') format('woff');
+}
+
 body {
   background-image: url('./assets/images/website_background.jpg');
   background-size: cover;
