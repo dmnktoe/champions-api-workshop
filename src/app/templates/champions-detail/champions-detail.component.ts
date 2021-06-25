@@ -13,6 +13,8 @@ import { finalize } from "rxjs/operators";
 export class ChampionsDetailComponent implements OnInit {
   // @ts-ignore
   champion: Champion;
+  // @ts-ignore
+  backgroundImage: string;
   title: any;
   isLoading = false;
   id: any;
@@ -43,7 +45,7 @@ export class ChampionsDetailComponent implements OnInit {
             })
           )
           .subscribe((champion) => {
-            function flatten(obj: ArrayLike<unknown> | { [s: string]: unknown; }){
+            function flatten(obj: ArrayLike<unknown> | { [s: string]: unknown; }) {
               // @ts-ignore
               return Object.values(obj).flat()
             }
@@ -51,12 +53,13 @@ export class ChampionsDetailComponent implements OnInit {
             // @ts-ignore
             this.champion = flatChampion['0'];
             this.setTitle({ title: this.champion.name });
+            this.getBackgroundImage()
           });
       }
     });
   }
 
-  getBackgroundImage(){
-    return "url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.champion.name + "_0.jpg)";
+  getBackgroundImage() {
+    this.backgroundImage = "url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + this.champion.id + "_0.jpg)";
   }
 }
