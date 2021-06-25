@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { Champion } from "../../core/model/Champion";
+import { Champion } from "../../../core/model/Champion";
 
 @Component({
   selector: 'app-champions-card',
